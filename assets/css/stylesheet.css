@@ -1,0 +1,82 @@
+/*#region reset*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  /*#endregion*/
+
+  #game-container {
+    background-color: green;
+    height: 40vw;
+    margin-left:32.5vw;
+    margin-top:2.5vw;
+    width:35vw;
+  }
+
+  #bomb-count {
+      background-color: aqua;
+      height: 12.5%;
+  }
+
+  #grid-container {
+      background-color:green;
+      height:87.5%;
+      position:relative;
+      z-index:1;
+  }
+
+  #minesweeper-back-tiles {
+      display:grid;
+      grid-auto-columns: 6.25%;
+      grid-auto-rows: 6.25%;
+      height:100%;
+      max-height:100%;
+      max-width:100%;
+      position:absolute;
+      width:100%;
+      z-index:2;
+  }
+
+  #minesweeper-front-tiles {
+      display:grid;
+      grid-auto-columns: 6.25%;
+      grid-auto-rows: 6.25%;
+      height:100%;
+      max-height:100%;
+      max-width:100%;
+      position:absolute;
+      width:100%;
+      z-index:3;
+  }
+
+  #test-1 {
+      background-color: red;
+      grid-column:1;
+      grid-row:1;
+  }
+  #test-2 {
+      background-color: yellow;
+      grid-column:16;
+      grid-row:16;
+  }
+  #test-3 {
+      background-color: yellow;
+      grid-column:14;
+      grid-row:14;
+  }
+  #test-4 {
+      background-color: yellow;
+      grid-column:4;
+      grid-row:4;
+  }
+
+
+  @media screen and (max-width: 600px) {
+      #game-container {
+          height:100vh;
+          margin-left:0;
+          margin-top:0;
+          width:100vw;
+      }
+  }
