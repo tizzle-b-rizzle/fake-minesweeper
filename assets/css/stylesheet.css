@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: #f5ec45;
   }
   /*#endregion*/
 
@@ -30,6 +31,7 @@
   }
 
   #minesweeper-back-tiles {
+      background-color: blue;
       display:grid;
       grid-auto-columns: 10%;
       grid-auto-rows: 10%;
@@ -52,6 +54,12 @@
       width:100%;
       z-index:3;
   }
+/*#endregion*/
+
+/*#region front tile class */
+/* .front-tile img:hover {
+    z-index:-100;
+} */
 /*#endregion*/
 
 /*#region the front grid items*/
@@ -97,46 +105,37 @@
 }
 /*#endregion*/
  
-#front-tile-row-1-column-1 img {
+/*#region front tile images*/
+#front-tile-row-1-column-1 img, #front-tile-row-1-column-2 img, #front-tile-row-1-column-3 img, #front-tile-row-1-column-4 img,
+#front-tile-row-1-column-5 img, #front-tile-row-1-column-6 img, #front-tile-row-1-column-7 img, #front-tile-row-1-column-8 img,
+#front-tile-row-1-column-9 img, #front-tile-row-1-column-10 img, #front-tile-row-2-column-1 img, #front-tile-row-2-column-2 img,
+#front-tile-row-2-column-3 img, #front-tile-row-2-column-4 img, #front-tile-row-2-column-5 img, #front-tile-row-2-column-6 img,
+#front-tile-row-2-column-7 img, #front-tile-row-2-column-8 img, #front-tile-row-2-column-9 img, #front-tile-row-2-column-10 img,
+#front-tile-row-3-column-1 img, #front-tile-row-3-column-2 img, #front-tile-row-3-column-3 img, #front-tile-row-3-column-4 img,
+#front-tile-row-3-column-5 img, #front-tile-row-3-column-6 img, #front-tile-row-3-column-7 img, #front-tile-row-3-column-8 img,
+#front-tile-row-3-column-9 img, #front-tile-row-3-column-10 img, #front-tile-row-4-column-1 img, #front-tile-row-4-column-2 img,
+#front-tile-row-4-column-3 img, #front-tile-row-4-column-4 img, #front-tile-row-4-column-5 img, #front-tile-row-4-column-6 img,
+#front-tile-row-4-column-7 img, #front-tile-row-4-column-8 img, #front-tile-row-4-column-9 img, #front-tile-row-4-column-10 img,
+#front-tile-row-5-column-1 img, #front-tile-row-5-column-2 img, #front-tile-row-5-column-3 img, #front-tile-row-5-column-4 img,
+#front-tile-row-5-column-5 img, #front-tile-row-5-column-6 img, #front-tile-row-5-column-7 img, #front-tile-row-5-column-8 img,
+#front-tile-row-5-column-9 img, #front-tile-row-5-column-10 img, #front-tile-row-6-column-1 img, #front-tile-row-6-column-2 img,
+#front-tile-row-6-column-3 img, #front-tile-row-6-column-4 img, #front-tile-row-6-column-5 img, #front-tile-row-6-column-6 img,
+#front-tile-row-6-column-7 img, #front-tile-row-6-column-8 img, #front-tile-row-6-column-9 img, #front-tile-row-6-column-10 img,
+#front-tile-row-7-column-1 img, #front-tile-row-7-column-2 img, #front-tile-row-7-column-3 img, #front-tile-row-7-column-4 img,
+#front-tile-row-7-column-5 img, #front-tile-row-7-column-6 img, #front-tile-row-7-column-7 img, #front-tile-row-7-column-8 img,
+#front-tile-row-7-column-9 img, #front-tile-row-7-column-10 img, #front-tile-row-8-column-1 img, #front-tile-row-8-column-2 img,
+#front-tile-row-8-column-3 img, #front-tile-row-8-column-4 img, #front-tile-row-8-column-5 img, #front-tile-row-8-column-6 img,
+#front-tile-row-8-column-7 img, #front-tile-row-8-column-8 img, #front-tile-row-8-column-9 img, #front-tile-row-8-column-10 img,
+#front-tile-row-9-column-1 img, #front-tile-row-9-column-2 img, #front-tile-row-9-column-3 img, #front-tile-row-9-column-4 img,
+#front-tile-row-9-column-5 img, #front-tile-row-9-column-6 img, #front-tile-row-9-column-7 img, #front-tile-row-9-column-8 img,
+#front-tile-row-9-column-9 img, #front-tile-row-9-column-10 img, #front-tile-row-10-column-1 img, #front-tile-row-10-column-2 img,
+#front-tile-row-10-column-3 img, #front-tile-row-10-column-4 img, #front-tile-row-10-column-5 img, #front-tile-row-10-column-6 img,
+#front-tile-row-10-column-7 img, #front-tile-row-10-column-8 img, #front-tile-row-10-column-9 img, #front-tile-row-10-column-10 img
+{
     height:100%;
     width:100%;
 }
-#front-tile-row-1-column-2 img {
-    height:100%;
-    width:100%;
-}
-#front-tile-row-1-column-3 img {
-    height:100%;
-    width:100%;
-}
-#front-tile-row-1-column-4 img {
-    height:100%;
-    width:100%;
-}
-#front-tile-row-1-column-5 img {
-    height:100%;
-    width:100%;
-}
-#front-tile-row-1-column-6 img {
-    height:100%;
-    width:100%;
-}
-#front-tile-row-1-column-7 img {
-    height:100%;
-    width:100%;
-}
-#front-tile-row-1-column-8 img {
-    height:100%;
-    width:100%;
-}
-#front-tile-row-1-column-9 img {
-    height:100%;
-    width:100%;
-}
-#front-tile-row-1-column-10 img {
-    height:100%;
-    width:100%;
-}
+/*#endregion*/
 
 @media screen and (max-width: 600px) {
       #game-container {
