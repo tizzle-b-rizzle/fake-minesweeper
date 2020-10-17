@@ -44,6 +44,7 @@
   }
 
   #minesweeper-front-tiles {
+      background-color: red;
       display:grid;
       grid-auto-columns: 10%;
       grid-auto-rows: 10%;
@@ -57,8 +58,8 @@
 /*#endregion*/
 
 /*#region front tile class */
-/* .front-tile img:hover {
-    z-index:-100;
+/* #a:active {
+   display:none;
 } */
 /*#endregion*/
 
