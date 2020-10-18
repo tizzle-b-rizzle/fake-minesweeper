@@ -446,6 +446,9 @@
     width:100%;
     z-index:3;
 }
+.front-tile-img img {
+    position:absolute;
+}
 /*#endregion*/
 
 @media screen and (max-width: 600px) {
