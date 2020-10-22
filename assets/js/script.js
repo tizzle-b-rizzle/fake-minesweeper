@@ -8,7 +8,6 @@ random number. The non-bombs need a function to determine the number of the tile
 everytime a value is assigned to a tile, that value is removed from the arrayOfBombsOrNot
 3. If not, the game checks to see if the tile is a bomb or not. If yes, game over, if not then the tile just goes
 */
-var startOfGame = false;
 var arrayOfBombsOrNot = 
 [
     B, B, B, B, B, B, B, B, B, B,
@@ -38,9 +37,10 @@ var arrayOfGameBombState =
 var numberOfTilesClicked = 0; //increase this as the tiles increase, if it equals one do the function
 
 function clickTile(a) {
-    if (numberOfTilesClicked == 0) (
-        numberofTilesClicked += 1
-    )
+    if (numberOfTilesClicked == 0) {
+         numberofTilesClicked += 1;
+         arrayOfGameBombState[a] = NB;
+    }
     switch (a) { //probably make the switch its own function so I can just call it
         case 1:
             image = document.getElementById("front-tile-row-1-column-1-img");
