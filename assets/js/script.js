@@ -34,7 +34,8 @@ var arrayOfGameBombState =
     0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
     0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 ]
-var numberOfTilesClicked = 0; //increase this as the tiles increase, if it equals one do the function
+var numberOfTilesClicked = 0; 
+var numberOfBombs = 0;
 
 function clickTile(a) {
     if (numberOfTilesClicked == 0) {
