@@ -1,13 +1,5 @@
-//to do the bomb check, give a second array a random variable from the the first array so the second array is the order, then use
-//secondArray[a-1] to determine if it's a bomb or not
-/*
-Steps needed:
-1. Once user clicks, the code check to see if it's the first tile clicked
-2. If yes, the code makes sure THAT tile isn't a bomb, and sets the rest to randomly be bombs or not using the arrayOfBombsOrNot and
-random number. The non-bombs need a function to determine the number of the tile
-everytime a value is assigned to a tile, that value is removed from the arrayOfBombsOrNot
-3. If not, the game checks to see if the tile is a bomb or not. If yes, game over, if not then the tile just goes
-*/
+//add function from test
+//assign each tile the bomb or not state (maybe do in switch>)
 var arrayOfBombsOrNot = 
 [
     B, B, B, B, B, B, B, B, B, B,
