@@ -48,6 +48,9 @@ function clickTile(a) {
     }
 
 }
+
+if (numberofTileClicked = 1) {
+
 for(var i = 0; i < (arrayOfGameBombState.length); i++) {
     if (arrayOfGameBombState[i] === 0) {
         if (numberOfBombs < 13) {
@@ -59,4 +62,4 @@ for(var i = 0; i < (arrayOfGameBombState.length); i++) {
             arrayOfGameBombState[i] = "NB";
         }
     }
-}
+} }
