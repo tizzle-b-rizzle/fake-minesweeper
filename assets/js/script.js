@@ -29,6 +29,12 @@ var arrayOfGameBombState =
 var numberOfTilesClicked = 0; 
 var numberOfBombs = 0;
 
+function playerLoses() { //need to try do i and j loop so that each is taken away, however I'll need to work out how to put a variable in an element name
+    for (var i = 0; i < 11; i++) {
+        image = document.getElementById("front-tile-row-"+i+"-column-1-img");
+        image.style.display = "none";
+    }
+}
 function clickTile(a) {
     if (numberOfTilesClicked == 0) {
          numberofTilesClicked += 1;
@@ -40,5 +46,17 @@ function clickTile(a) {
             image.style.display = "none";
             break;
     }
-}
 
+}
+for(var i = 0; i < (arrayOfGameBombState.length); i++) {
+    if (arrayOfGameBombState[i] === 0) {
+        if (numberOfBombs < 13) {
+             arrayOfGameBombState[i] = arrayOfBombsOrNot[Math.floor(Math.random() * arrayOfBombsOrNot.length)]; 
+             if (arrayOfGameBombState[i] = "B") {
+                 numberOfBombs += 1;
+             }
+        } else {
+            arrayOfGameBombState[i] = "NB";
+        }
+    }
+}
