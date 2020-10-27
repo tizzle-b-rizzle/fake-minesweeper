@@ -11,6 +11,7 @@
     <div id="game-container">
         <div id="bomb-count"></div>
         <div id="grid">
+            <!--#region front-tile-images-->
             <img src="assets/img/row-1-col-1.jpg" id="front-tile-row-1-column-1-img" class="front-tile-img" onclick="clickTile(1)"></img>
             <img src="assets/img/row-1-col-2.jpg" id="front-tile-row-1-column-2-img" class="front-tile-img" onclick="playerLoses()"></img>
             <img src="assets/img/row-1-col-3.jpg" id="front-tile-row-1-column-3-img" class="front-tile-img"></img>
@@ -111,17 +112,112 @@
             <img src="assets/img/row-10-col-8.jpg" id="front-tile-row-10-column-8-img" class="front-tile-img"></img>
             <img src="assets/img/row-10-col-9.jpg" id="front-tile-row-10-column-9-img" class="front-tile-img"></img>
             <img src="assets/img/row-10-col-10.jpg" id="front-tile-row-10-column-10-img" class="front-tile-img"></img>
+            <!--#endregion-->
+            <!--#region back-tile images-->
+            <img src="" id="back-tile-row-1-column-1-img" class="back-tile-img">
+            <img src="" id="back-tile-row-1-column-2-img" class="back-tile-img">
+            <img src="" id="back-tile-row-1-column-3-img" class="back-tile-img">
+            <img src="" id="back-tile-row-1-column-4-img" class="back-tile-img">
+            <img src="" id="back-tile-row-1-column-5-img" class="back-tile-img">
+            <img src="" id="back-tile-row-1-column-6-img" class="back-tile-img">
+            <img src="" id="back-tile-row-1-column-7-img" class="back-tile-img">
+            <img src="" id="back-tile-row-1-column-8-img" class="back-tile-img">
+            <img src="" id="back-tile-row-1-column-9-img" class="back-tile-img">
+            <img src="" id="back-tile-row-1-column-10-img" class="back-tile-img">
+            <img src="" id="back-tile-row-2-column-1-img" class="back-tile-img">
+            <img src="" id="back-tile-row-2-column-2-img" class="back-tile-img">
+            <img src="" id="back-tile-row-2-column-3-img" class="back-tile-img">
+            <img src="" id="back-tile-row-2-column-4-img" class="back-tile-img">
+            <img src="" id="back-tile-row-2-column-5-img" class="back-tile-img">
+            <img src="" id="back-tile-row-2-column-6-img" class="back-tile-img">
+            <img src="" id="back-tile-row-2-column-7-img" class="back-tile-img">
+            <img src="" id="back-tile-row-2-column-8-img" class="back-tile-img">
+            <img src="" id="back-tile-row-2-column-9-img" class="back-tile-img">
+            <img src="" id="back-tile-row-2-column-10-img" class="back-tile-img">
+            <img src="" id="back-tile-row-3-column-1-img" class="back-tile-img">
+            <img src="" id="back-tile-row-3-column-2-img" class="back-tile-img">
+            <img src="" id="back-tile-row-3-column-3-img" class="back-tile-img">
+            <img src="" id="back-tile-row-3-column-4-img" class="back-tile-img">
+            <img src="" id="back-tile-row-3-column-5-img" class="back-tile-img">
+            <img src="" id="back-tile-row-3-column-6-img" class="back-tile-img">
+            <img src="" id="back-tile-row-3-column-7-img" class="back-tile-img">
+            <img src="" id="back-tile-row-3-column-8-img" class="back-tile-img">
+            <img src="" id="back-tile-row-3-column-9-img" class="back-tile-img">
+            <img src="" id="back-tile-row-3-column-10-img" class="back-tile-img">
+            <img src="" id="back-tile-row-4-column-1-img" class="back-tile-img">
+            <img src="" id="back-tile-row-4-column-2-img" class="back-tile-img">
+            <img src="" id="back-tile-row-4-column-3-img" class="back-tile-img">
+            <img src="" id="back-tile-row-4-column-4-img" class="back-tile-img">
+            <img src="" id="back-tile-row-4-column-5-img" class="back-tile-img">
+            <img src="" id="back-tile-row-4-column-6-img" class="back-tile-img">
+            <img src="" id="back-tile-row-4-column-7-img" class="back-tile-img">
+            <img src="" id="back-tile-row-4-column-8-img" class="back-tile-img">
+            <img src="" id="back-tile-row-4-column-9-img" class="back-tile-img">
+            <img src="" id="back-tile-row-4-column-10-img" class="back-tile-img">
+            <img src="" id="back-tile-row-5-column-1-img" class="back-tile-img">
+            <img src="" id="back-tile-row-5-column-2-img" class="back-tile-img">
+            <img src="" id="back-tile-row-5-column-3-img" class="back-tile-img">
+            <img src="" id="back-tile-row-5-column-4-img" class="back-tile-img">
+            <img src="" id="back-tile-row-5-column-5-img" class="back-tile-img">
+            <img src="" id="back-tile-row-5-column-6-img" class="back-tile-img">
+            <img src="" id="back-tile-row-5-column-7-img" class="back-tile-img">
+            <img src="" id="back-tile-row-5-column-8-img" class="back-tile-img">
+            <img src="" id="back-tile-row-5-column-9-img" class="back-tile-img">
+            <img src="" id="back-tile-row-5-column-10-img" class="back-tile-img">
+            <img src="" id="back-tile-row-6-column-1-img" class="back-tile-img">
+            <img src="" id="back-tile-row-6-column-2-img" class="back-tile-img">
+            <img src="" id="back-tile-row-6-column-3-img" class="back-tile-img">
+            <img src="" id="back-tile-row-6-column-4-img" class="back-tile-img">
+            <img src="" id="back-tile-row-6-column-5-img" class="back-tile-img">
+            <img src="" id="back-tile-row-6-column-6-img" class="back-tile-img">
+            <img src="" id="back-tile-row-6-column-7-img" class="back-tile-img">
+            <img src="" id="back-tile-row-6-column-8-img" class="back-tile-img">
+            <img src="" id="back-tile-row-6-column-9-img" class="back-tile-img">
+            <img src="" id="back-tile-row-6-column-10-img" class="back-tile-img">
+            <img src="" id="back-tile-row-7-column-1-img" class="back-tile-img">
+            <img src="" id="back-tile-row-7-column-2-img" class="back-tile-img">
+            <img src="" id="back-tile-row-7-column-3-img" class="back-tile-img">
+            <img src="" id="back-tile-row-7-column-4-img" class="back-tile-img">
+            <img src="" id="back-tile-row-7-column-5-img" class="back-tile-img">
+            <img src="" id="back-tile-row-7-column-6-img" class="back-tile-img">
+            <img src="" id="back-tile-row-7-column-7-img" class="back-tile-img">
+            <img src="" id="back-tile-row-7-column-8-img" class="back-tile-img">
+            <img src="" id="back-tile-row-7-column-9-img" class="back-tile-img">
+            <img src="" id="back-tile-row-7-column-10-img" class="back-tile-img">
+            <img src="" id="back-tile-row-8-column-1-img" class="back-tile-img">
+            <img src="" id="back-tile-row-8-column-2-img" class="back-tile-img">
+            <img src="" id="back-tile-row-8-column-3-img" class="back-tile-img">
+            <img src="" id="back-tile-row-8-column-4-img" class="back-tile-img">
+            <img src="" id="back-tile-row-8-column-5-img" class="back-tile-img">
+            <img src="" id="back-tile-row-8-column-6-img" class="back-tile-img">
+            <img src="" id="back-tile-row-8-column-7-img" class="back-tile-img">
+            <img src="" id="back-tile-row-8-column-8-img" class="back-tile-img">
+            <img src="" id="back-tile-row-8-column-9-img" class="back-tile-img">
+            <img src="" id="back-tile-row-8-column-10-img" class="back-tile-img">
+            <img src="" id="back-tile-row-9-column-1-img" class="back-tile-img">
+            <img src="" id="back-tile-row-9-column-2-img" class="back-tile-img">
+            <img src="" id="back-tile-row-9-column-3-img" class="back-tile-img">
+            <img src="" id="back-tile-row-9-column-4-img" class="back-tile-img">
+            <img src="" id="back-tile-row-9-column-5-img" class="back-tile-img">
+            <img src="" id="back-tile-row-9-column-6-img" class="back-tile-img">
+            <img src="" id="back-tile-row-9-column-7-img" class="back-tile-img">
+            <img src="" id="back-tile-row-9-column-8-img" class="back-tile-img">
+            <img src="" id="back-tile-row-9-column-9-img" class="back-tile-img">
+            <img src="" id="back-tile-row-9-column-10-img" class="back-tile-img">
+            <img src="" id="back-tile-row-10-column-1-img" class="back-tile-img">
+            <img src="" id="back-tile-row-10-column-2-img" class="back-tile-img">
+            <img src="" id="back-tile-row-10-column-3-img" class="back-tile-img">
+            <img src="" id="back-tile-row-10-column-4-img" class="back-tile-img">
+            <img src="" id="back-tile-row-10-column-5-img" class="back-tile-img">
+            <img src="" id="back-tile-row-10-column-6-img" class="back-tile-img">
+            <img src="" id="back-tile-row-10-column-7-img" class="back-tile-img">
+            <img src="" id="back-tile-row-10-column-8-img" class="back-tile-img">
+            <img src="" id="back-tile-row-10-column-9-img" class="back-tile-img">
+            <img src="" id="back-tile-row-10-column-10-img" class="back-tile-img">
+            <!--#endregion-->
         </div>
 </body>
 <script type="text/javascript" src="assets/js/script.js"></script>
 </html>
 
-<!-- 
-    TO DO:
-    -COMPLETELY REDO SO THAT THE IMAGES AND TEH NUMBER ARE ON THE SAME THING
-    -Fix it so that the display:none (etc) only affects front tiles
-    -NEED TO ADD THE GRID GAP/BORDER AND GIVE IT A COLOUR
-    -Do the top bit so it says "Picture of Judge Judy?" and then "Oh wait it's fucken Minesweeper" and the bomb count once the user 
-    has clicked one tile
-    -All the programming shit
- -->
+

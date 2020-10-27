@@ -1,5 +1,3 @@
-//add function from test
-//assign each tile the bomb or not state (maybe do in switch>)
 var arrayOfBombsOrNot = 
 [
     B, B, B, B, B, B, B, B, B, B,
@@ -11,7 +9,7 @@ var arrayOfBombsOrNot =
     NB, NB, NB, NB, NB, NB, NB, NB, NB, NB,
     NB, NB, NB, NB, NB, NB, NB, NB, NB, NB,
     NB, NB, NB, NB, NB, NB, NB, NB, NB, NB,
-    NB, NB, NB, NB, NB, NB, NB, NB, NB
+    NB, NB, NB, NB, NB, NB, NB, NB, NB, NB
 ]
 var arrayOfGameBombState =
 [
@@ -26,9 +24,19 @@ var arrayOfGameBombState =
     0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
     0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 ]
-var numberOfTilesClicked = 0; 
 var numberOfBombs = 0;
-
+for(var i = 0; i < (arrayOfGameBombState.length - 1); i++) { //do if else for each tile
+    if (arrayOfGameBombState[i] === 0) {
+        if (numberOfBombs < 13) {
+             arrayOfGameBombState[i] = arrayOfBombsOrNot[Math.floor(Math.random() * (arrayOfBombsOrNot.length -1))]; 
+             if (arrayOfGameBombState[i] = "B") {
+                 numberOfBombs += 1;
+             }
+        } else {
+            arrayOfGameBombState[i] = "NB";
+        }
+    }
+} 
 function playerLoses() { //need to try do i and j loop so that each is taken away, however I'll need to work out how to put a variable in an element name
     for (var i = 0; i < 11; i++) {
         image = document.getElementById("front-tile-row-"+i+"-column-1-img");
@@ -36,11 +44,7 @@ function playerLoses() { //need to try do i and j loop so that each is taken awa
     }
 }
 function clickTile(a) {
-    if (numberOfTilesClicked == 0) {
-         numberofTilesClicked += 1;
-         arrayOfGameBombState[a] = NB;
-    }
-    switch (a) { //probably make the switch its own function so I can just call it
+    switch (a) { 
         case 1:
             image = document.getElementById("front-tile-row-1-column-1-img");
             image.style.display = "none";
@@ -49,17 +53,17 @@ function clickTile(a) {
 
 }
 
-if (numberofTileClicked = 1) {
 
-for(var i = 0; i < (arrayOfGameBombState.length); i++) {
-    if (arrayOfGameBombState[i] === 0) {
-        if (numberOfBombs < 13) {
-             arrayOfGameBombState[i] = arrayOfBombsOrNot[Math.floor(Math.random() * arrayOfBombsOrNot.length)]; 
-             if (arrayOfGameBombState[i] = "B") {
-                 numberOfBombs += 1;
-             }
-        } else {
-            arrayOfGameBombState[i] = "NB";
-        }
-    }
-} }
+
+
+
+
+
+
+
+
+
+//TO DO:
+//under the i function do if and else to generate each image of the tile
+//For the case where it's NB you need to call another function which calculates the number
+//in the switch do if nb then [code you've already got], if bomb then playerLoses()
