@@ -1,15 +1,15 @@
 var arrayOfBombsOrNot = 
 [
-    B, B, B, B, B, B, B, B, B, B,
-    B, B, NB, NB, NB, NB, NB, NB, NB, NB, 
-    NB, NB, NB, NB, NB, NB, NB, NB, NB, NB, 
-    NB, NB, NB, NB, NB, NB, NB, NB, NB, NB,
-    NB, NB, NB, NB, NB, NB, NB, NB, NB, NB,
-    NB, NB, NB, NB, NB, NB, NB, NB, NB, NB,
-    NB, NB, NB, NB, NB, NB, NB, NB, NB, NB,
-    NB, NB, NB, NB, NB, NB, NB, NB, NB, NB,
-    NB, NB, NB, NB, NB, NB, NB, NB, NB, NB,
-    NB, NB, NB, NB, NB, NB, NB, NB, NB, NB
+    "B", "B", "B", "B", "B", "B", "B", "B", "B", "B",
+    "B", "B", "NB", "NB", "NB", "NB", "NB", "NB", "NB", "NB", 
+    "NB", "NB", "NB", "NB", "NB", "NB", "NB", "NB", "NB", "NB", 
+    "NB", "NB", "NB", "NB", "NB", "NB", "NB", "NB", "NB", "NB",
+    "NB", "NB", "NB", "NB", "NB", "NB", "NB", "NB", "NB", "NB",
+    "NB", "NB", "NB", "NB", "NB", "NB", "NB", "NB", "NB", "NB",
+    "NB", "NB", "NB", "NB", "NB", "NB", "NB", "NB", "NB", "NB",
+    "NB", "NB", "NB", "NB", "NB", "NB", "NB", "NB", "NB", "NB",
+    "NB", "NB", "NB", "NB", "NB", "NB", "NB", "NB", "NB", "NB",
+    "NB", "NB", "NB", "NB", "NB", "NB", "NB", "NB", "NB"
 ]
 var arrayOfGameBombState =
 [
@@ -37,11 +37,17 @@ for(var i = 0; i < (arrayOfGameBombState.length - 1); i++) { //do if else for ea
         }
     }
 } 
+
 function playerLoses() { //need to try do i and j loop so that each is taken away, however I'll need to work out how to put a variable in an element name
-    for (var i = 0; i < 11; i++) {
-        image = document.getElementById("front-tile-row-"+i+"-column-1-img");
+    for (var i = 1; i < 11; i++)  { //change i and j to row and column
+        for (var j = 1; j < 11; j++) {
+        image = document.getElementById("front-tile-row-" + i +"-column-" + j + "-img")
+        image.style.visibility = "hidden";
         image.style.display = "none";
-    }
+        console.log(image)
+        console.log("i= ", i)
+        console.log("j= ", j)
+    }}
 }
 function clickTile(a) {
     switch (a) { 
