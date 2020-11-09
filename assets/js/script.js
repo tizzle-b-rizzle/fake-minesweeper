@@ -2499,6 +2499,204 @@ if (arrayOfGameBombState[89] == "B") {
     }
     element = document.getElementById("back-tile-row-9-column-10-img").src = "assets/img/" + bombState90 + ".png";
 }
+if (arrayOfGameBombState[90] == "B") {
+    element = document.getElementById("back-tile-row-10-column-1-img").src = "assets/img/bob-omb-not-lit.jpg";
+} else {
+    var bombState91 = 0;
+    if (arrayOfGameBombState[80] == "B") {
+        bombState91 += 1;
+    }
+    if (arrayOfGameBombState[81] == "B") {
+        bombState91 += 1;
+    }
+    if (arrayOfGameBombState[91] == "B") {
+        bombState91 += 1;
+    }
+    element = document.getElementById("back-tile-row-10-column-1-img").src = "assets/img/" + bombState91 + ".png";
+}
+if (arrayOfGameBombState[91] == "B") {
+    element = document.getElementById("back-tile-row-10-column-2-img").src = "assets/img/bob-omb-not-lit.jpg";
+} else {
+    var bombState92 = 0;
+    if (arrayOfGameBombState[80] == "B") {
+        bombState92 += 1;
+    }
+    if (arrayOfGameBombState[81] == "B") {
+        bombState92 += 1;
+    }
+    if (arrayOfGameBombState[82] == "B") {
+        bombState92 += 1;
+    }
+    if (arrayOfGameBombState[90] == "B") {
+        bombState92 += 1;
+    }
+    if (arrayOfGameBombState[92] == "B") {
+        bombState92 += 1;
+    }
+    element = document.getElementById("back-tile-row-10-column-2-img").src = "assets/img/" + bombState92 + ".png";
+}
+if (arrayOfGameBombState[92] == "B") {
+    element = document.getElementById("back-tile-row-10-column-3-img").src = "assets/img/bob-omb-not-lit.jpg";
+} else {
+    var bombState93 = 0;
+    if (arrayOfGameBombState[81] == "B") {
+        bombState93 += 1;
+    }
+    if (arrayOfGameBombState[82] == "B") {
+        bombState93 += 1;
+    }
+    if (arrayOfGameBombState[83] == "B") {
+        bombState93 += 1;
+    }
+    if (arrayOfGameBombState[91] == "B") {
+        bombState93 += 1;
+    }
+    if (arrayOfGameBombState[93] == "B") {
+        bombState93 += 1;
+    }
+    element = document.getElementById("back-tile-row-10-column-3-img").src = "assets/img/" + bombState93 + ".png";
+}
+if (arrayOfGameBombState[93] == "B") {
+    element = document.getElementById("back-tile-row-10-column-4-img").src = "assets/img/bob-omb-not-lit.jpg";
+} else {
+    var bombState94 = 0;
+    if (arrayOfGameBombState[82] == "B") {
+        bombState94 += 1;
+    }
+    if (arrayOfGameBombState[83] == "B") {
+        bombState94 += 1;
+    }
+    if (arrayOfGameBombState[84] == "B") {
+        bombState94 += 1;
+    }
+    if (arrayOfGameBombState[92] == "B") {
+        bombState94 += 1;
+    }
+    if (arrayOfGameBombState[94] == "B") {
+        bombState94 += 1;
+    }
+    element = document.getElementById("back-tile-row-10-column-4-img").src = "assets/img/" + bombState94 + ".png";
+}
+if (arrayOfGameBombState[94] == "B") {
+    element = document.getElementById("back-tile-row-10-column-5-img").src = "assets/img/bob-omb-not-lit.jpg";
+} else {
+    var bombState95 = 0;
+    if (arrayOfGameBombState[83] == "B") {
+        bombState95 += 1;
+    }
+    if (arrayOfGameBombState[84] == "B") {
+        bombState95 += 1;
+    }
+    if (arrayOfGameBombState[85] == "B") {
+        bombState95 += 1;
+    }
+    if (arrayOfGameBombState[93] == "B") {
+        bombState95 += 1;
+    }
+    if (arrayOfGameBombState[95] == "B") {
+        bombState95 += 1;
+    }
+    element = document.getElementById("back-tile-row-10-column-5-img").src = "assets/img/" + bombState95 + ".png";
+}
+if (arrayOfGameBombState[95] == "B") {
+    element = document.getElementById("back-tile-row-10-column-6-img").src = "assets/img/bob-omb-not-lit.jpg";
+} else {
+    var bombState96 = 0;
+    if (arrayOfGameBombState[84] == "B") {
+        bombState96 += 1;
+    }
+    if (arrayOfGameBombState[85] == "B") {
+        bombState96 += 1;
+    }
+    if (arrayOfGameBombState[86] == "B") {
+        bombState96 += 1;
+    }
+    if (arrayOfGameBombState[94] == "B") {
+        bombState96 += 1;
+    }
+    if (arrayOfGameBombState[96] == "B") {
+        bombState96 += 1;
+    }
+    element = document.getElementById("back-tile-row-10-column-6-img").src = "assets/img/" + bombState96 + ".png";
+}
+if (arrayOfGameBombState[96] == "B") {
+    element = document.getElementById("back-tile-row-10-column-7-img").src = "assets/img/bob-omb-not-lit.jpg";
+} else {
+    var bombState97 = 0;
+    if (arrayOfGameBombState[85] == "B") {
+        bombState97 += 1;
+    }
+    if (arrayOfGameBombState[86] == "B") {
+        bombState97 += 1;
+    }
+    if (arrayOfGameBombState[87] == "B") {
+        bombState97 += 1;
+    }
+    if (arrayOfGameBombState[95] == "B") {
+        bombState97 += 1;
+    }
+    if (arrayOfGameBombState[97] == "B") {
+        bombState97 += 1;
+    }
+    element = document.getElementById("back-tile-row-10-column-7-img").src = "assets/img/" + bombState97 + ".png";
+}
+if (arrayOfGameBombState[97] == "B") {
+    element = document.getElementById("back-tile-row-10-column-8-img").src = "assets/img/bob-omb-not-lit.jpg";
+} else {
+    var bombState98 = 0;
+    if (arrayOfGameBombState[86] == "B") {
+        bombState98 += 1;
+    }
+    if (arrayOfGameBombState[87] == "B") {
+        bombState98 += 1;
+    }
+    if (arrayOfGameBombState[88] == "B") {
+        bombState98 += 1;
+    }
+    if (arrayOfGameBombState[96] == "B") {
+        bombState98 += 1;
+    }
+    if (arrayOfGameBombState[98] == "B") {
+        bombState98 += 1;
+    }
+    element = document.getElementById("back-tile-row-10-column-8-img").src = "assets/img/" + bombState98 + ".png";
+}
+if (arrayOfGameBombState[98] == "B") {
+    element = document.getElementById("back-tile-row-10-column-9-img").src = "assets/img/bob-omb-not-lit.jpg";
+} else {
+    var bombState99 = 0;
+    if (arrayOfGameBombState[87] == "B") {
+        bombState99 += 1;
+    }
+    if (arrayOfGameBombState[88] == "B") {
+        bombState99 += 1;
+    }
+    if (arrayOfGameBombState[89] == "B") {
+        bombState99 += 1;
+    }
+    if (arrayOfGameBombState[97] == "B") {
+        bombState99 += 1;
+    }
+    if (arrayOfGameBombState[99] == "B") {
+        bombState99 += 1;
+    }
+    element = document.getElementById("back-tile-row-10-column-9-img").src = "assets/img/" + bombState99 + ".png";
+}
+if (arrayOfGameBombState[99] == "B") {
+    element = document.getElementById("back-tile-row-10-column-10-img").src = "assets/img/bob-omb-not-lit.jpg";
+} else {
+    var bombState100 = 0;
+    if (arrayOfGameBombState[88] == "B") {
+        bombState100 += 1;
+    }
+    if (arrayOfGameBombState[89] == "B") {
+        bombState100 += 1;
+    }
+    if (arrayOfGameBombState[98] == "B") {
+        bombState100 += 1;
+    }
+    element = document.getElementById("back-tile-row-10-column-10-img").src = "assets/img/" + bombState100 + ".png";
+}
 //#endregion
 function playerLoses() { //need to try do i and j loop so that each is taken away, however I'll need to work out how to put a variable in an element name
     for (var i = 1; i < 11; i++)  { //change i and j to row and column
