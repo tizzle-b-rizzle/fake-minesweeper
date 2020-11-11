@@ -2698,17 +2698,20 @@ if (arrayOfGameBombState[99] == "B") {
     element = document.getElementById("back-tile-row-10-column-10-img").src = "assets/img/" + bombState100 + ".png";
 }
 //#endregion
-function playerLoses() { //need to try do i and j loop so that each is taken away, however I'll need to work out how to put a variable in an element name
-    for (var i = 1; i < 11; i++)  { //change i and j to row and column
-        for (var j = 1; j < 11; j++) {
-        image = document.getElementById("front-tile-row-" + i +"-column-" + j + "-img")
-        image.style.visibility = "hidden";
-        image.style.display = "none";
-        console.log(image)
-        console.log("i= ", i)
-        console.log("j= ", j)
-    }}
-}
+function playerLoses() { 
+    for (var a = 0; a < 99; a++) {
+        for (var i = 1; i < 11; i++)  { 
+            for (var j = 1; j < 11; j++) {
+            imageFront = document.getElementById("front-tile-row-" + i +"-column-" + j + "-img")
+            // if (arrayOfGameBombState[a] == "B") {
+            //     imageBack = document.getElementById("back-tile-row-" + i +"-column-" + j + "-img")
+            //     imageBack.src = "assets/img/bob-omb-lit.jpg"
+            // }
+            imageFront.style.visibility="hidden";
+            imageFront.style.display="none";
+        }}
+    }
+    }
 function clickTile(a) {
     switch (a) { 
         case 1:
