@@ -5,12 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/stylesheet.css">
     <link rel="icon" href="assets/img/bob-omb-not-lit.jpg">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
     <title>Minesweeper</title>
 </head>
 <body>
     <div id="game-container">
-        <div id="bomb-count"></div>
-        <div id="grid"> <!--Self-close the img tags!-->
+        <div id="player-message">
+            <p id="the-message">A picture of Judge Judy??</p>
+        </div>
+        <div id="grid"> 
             <!--#region front-tile-images-->
             <img src="assets/img/row-1-col-1.jpg" id="front-tile-row-1-column-1-img" class="front-tile-img" onclick="clickTile(1)"/>
             <img src="assets/img/row-1-col-2.jpg" id="front-tile-row-1-column-2-img" class="front-tile-img" onclick="clickTile(2)"/>
@@ -32,86 +36,86 @@
             <img src="assets/img/row-2-col-8.jpg" id="front-tile-row-2-column-8-img" class="front-tile-img" onclick="clickTile(18)"/>
             <img src="assets/img/row-2-col-9.jpg" id="front-tile-row-2-column-9-img" class="front-tile-img" onclick="clickTile(19)"/>
             <img src="assets/img/row-2-col-10.jpg" id="front-tile-row-2-column-10-img" class="front-tile-img" onclick="clickTile(20)"/>
-            <img src="assets/img/row-3-col-1.jpg" id="front-tile-row-3-column-1-img" class="front-tile-img"></img>
-            <img src="assets/img/row-3-col-2.jpg" id="front-tile-row-3-column-2-img" class="front-tile-img"></img>
-            <img src="assets/img/row-3-col-3.jpg" id="front-tile-row-3-column-3-img" class="front-tile-img"></img>
-            <img src="assets/img/row-3-col-4.jpg" id="front-tile-row-3-column-4-img" class="front-tile-img"></img>
-            <img src="assets/img/row-3-col-5.jpg" id="front-tile-row-3-column-5-img" class="front-tile-img"></img>
-            <img src="assets/img/row-3-col-6.jpg" id="front-tile-row-3-column-6-img" class="front-tile-img"></img>
-            <img src="assets/img/row-3-col-7.jpg" id="front-tile-row-3-column-7-img" class="front-tile-img"></img>
-            <img src="assets/img/row-3-col-8.jpg" id="front-tile-row-3-column-8-img" class="front-tile-img"></img>
-            <img src="assets/img/row-3-col-9.jpg" id="front-tile-row-3-column-9-img" class="front-tile-img"></img>
-            <img src="assets/img/row-3-col-10.jpg" id="front-tile-row-3-column-10-img" class="front-tile-img"></img>
-            <img src="assets/img/row-4-col-1.jpg" id="front-tile-row-4-column-1-img" class="front-tile-img"></img>
-            <img src="assets/img/row-4-col-2.jpg" id="front-tile-row-4-column-2-img" class="front-tile-img"></img>
-            <img src="assets/img/row-4-col-3.jpg" id="front-tile-row-4-column-3-img" class="front-tile-img"></img>
-            <img src="assets/img/row-4-col-4.jpg" id="front-tile-row-4-column-4-img" class="front-tile-img"></img>
-            <img src="assets/img/row-4-col-5.jpg" id="front-tile-row-4-column-5-img" class="front-tile-img"></img>
-            <img src="assets/img/row-4-col-6.jpg" id="front-tile-row-4-column-6-img" class="front-tile-img"></img>
-            <img src="assets/img/row-4-col-7.jpg" id="front-tile-row-4-column-7-img" class="front-tile-img"></img>
-            <img src="assets/img/row-4-col-8.jpg" id="front-tile-row-4-column-8-img" class="front-tile-img"></img>
-            <img src="assets/img/row-4-col-9.jpg" id="front-tile-row-4-column-9-img" class="front-tile-img"></img>
-            <img src="assets/img/row-4-col-10.jpg" id="front-tile-row-4-column-10-img" class="front-tile-img"></img>
-            <img src="assets/img/row-5-col-1.jpg" id="front-tile-row-5-column-1-img" class="front-tile-img"></img>
-            <img src="assets/img/row-5-col-2.jpg" id="front-tile-row-5-column-2-img" class="front-tile-img"></img>
-            <img src="assets/img/row-5-col-3.jpg" id="front-tile-row-5-column-3-img" class="front-tile-img"></img>
-            <img src="assets/img/row-5-col-4.jpg" id="front-tile-row-5-column-4-img" class="front-tile-img"></img>
-            <img src="assets/img/row-5-col-5.jpg" id="front-tile-row-5-column-5-img" class="front-tile-img"></img>
-            <img src="assets/img/row-5-col-6.jpg" id="front-tile-row-5-column-6-img" class="front-tile-img"></img>
-            <img src="assets/img/row-5-col-7.jpg" id="front-tile-row-5-column-7-img" class="front-tile-img"></img>
-            <img src="assets/img/row-5-col-8.jpg" id="front-tile-row-5-column-8-img" class="front-tile-img"></img>
-            <img src="assets/img/row-5-col-9.jpg" id="front-tile-row-5-column-9-img" class="front-tile-img"></img>
-            <img src="assets/img/row-5-col-10.jpg" id="front-tile-row-5-column-10-img" class="front-tile-img"></img>
-            <img src="assets/img/row-6-col-1.jpg" id="front-tile-row-6-column-1-img" class="front-tile-img"></img>
-            <img src="assets/img/row-6-col-2.jpg" id="front-tile-row-6-column-2-img" class="front-tile-img"></img>
-            <img src="assets/img/row-6-col-3.jpg" id="front-tile-row-6-column-3-img" class="front-tile-img"></img>
-            <img src="assets/img/row-6-col-4.jpg" id="front-tile-row-6-column-4-img" class="front-tile-img"></img>
-            <img src="assets/img/row-6-col-5.jpg" id="front-tile-row-6-column-5-img" class="front-tile-img"></img>
-            <img src="assets/img/row-6-col-6.jpg" id="front-tile-row-6-column-6-img" class="front-tile-img"></img>
-            <img src="assets/img/row-6-col-7.jpg" id="front-tile-row-6-column-7-img" class="front-tile-img"></img>
-            <img src="assets/img/row-6-col-8.jpg" id="front-tile-row-6-column-8-img" class="front-tile-img"></img>
-            <img src="assets/img/row-6-col-9.jpg" id="front-tile-row-6-column-9-img" class="front-tile-img"></img>
-            <img src="assets/img/row-6-col-10.jpg" id="front-tile-row-6-column-10-img" class="front-tile-img"></img>
-            <img src="assets/img/row-7-col-1.jpg" id="front-tile-row-7-column-1-img" class="front-tile-img"></img>
-            <img src="assets/img/row-7-col-2.jpg" id="front-tile-row-7-column-2-img" class="front-tile-img"></img>
-            <img src="assets/img/row-7-col-3.jpg" id="front-tile-row-7-column-3-img" class="front-tile-img"></img>
-            <img src="assets/img/row-7-col-4.jpg" id="front-tile-row-7-column-4-img" class="front-tile-img"></img>
-            <img src="assets/img/row-7-col-5.jpg" id="front-tile-row-7-column-5-img" class="front-tile-img"></img>
-            <img src="assets/img/row-7-col-6.jpg" id="front-tile-row-7-column-6-img" class="front-tile-img"></img>
-            <img src="assets/img/row-7-col-7.jpg" id="front-tile-row-7-column-7-img" class="front-tile-img"></img>
-            <img src="assets/img/row-7-col-8.jpg" id="front-tile-row-7-column-8-img" class="front-tile-img"></img>
-            <img src="assets/img/row-7-col-9.jpg" id="front-tile-row-7-column-9-img" class="front-tile-img"></img>
-            <img src="assets/img/row-7-col-10.jpg" id="front-tile-row-7-column-10-img" class="front-tile-img"></img>
-            <img src="assets/img/row-8-col-1.jpg" id="front-tile-row-8-column-1-img" class="front-tile-img"></img>
-            <img src="assets/img/row-8-col-2.jpg" id="front-tile-row-8-column-2-img" class="front-tile-img"></img>
-            <img src="assets/img/row-8-col-3.jpg" id="front-tile-row-8-column-3-img" class="front-tile-img"></img>
-            <img src="assets/img/row-8-col-4.jpg" id="front-tile-row-8-column-4-img" class="front-tile-img"></img>
-            <img src="assets/img/row-8-col-5.jpg" id="front-tile-row-8-column-5-img" class="front-tile-img"></img>
-            <img src="assets/img/row-8-col-6.jpg" id="front-tile-row-8-column-6-img" class="front-tile-img"></img>
-            <img src="assets/img/row-8-col-7.jpg" id="front-tile-row-8-column-7-img" class="front-tile-img"></img>
-            <img src="assets/img/row-8-col-8.jpg" id="front-tile-row-8-column-8-img" class="front-tile-img"></img>
-            <img src="assets/img/row-8-col-9.jpg" id="front-tile-row-8-column-9-img" class="front-tile-img"></img>
-            <img src="assets/img/row-8-col-10.jpg" id="front-tile-row-8-column-10-img" class="front-tile-img"></img>
-            <img src="assets/img/row-9-col-1.jpg" id="front-tile-row-9-column-1-img" class="front-tile-img"></img>
-            <img src="assets/img/row-9-col-2.jpg" id="front-tile-row-9-column-2-img" class="front-tile-img"></img>
-            <img src="assets/img/row-9-col-3.jpg" id="front-tile-row-9-column-3-img" class="front-tile-img"></img>
-            <img src="assets/img/row-9-col-4.jpg" id="front-tile-row-9-column-4-img" class="front-tile-img"></img>
-            <img src="assets/img/row-9-col-5.jpg" id="front-tile-row-9-column-5-img" class="front-tile-img"></img>
-            <img src="assets/img/row-9-col-6.jpg" id="front-tile-row-9-column-6-img" class="front-tile-img"></img>
-            <img src="assets/img/row-9-col-7.jpg" id="front-tile-row-9-column-7-img" class="front-tile-img"></img>
-            <img src="assets/img/row-9-col-8.jpg" id="front-tile-row-9-column-8-img" class="front-tile-img"></img>
-            <img src="assets/img/row-9-col-9.jpg" id="front-tile-row-9-column-9-img" class="front-tile-img"></img>
-            <img src="assets/img/row-9-col-10.jpg" id="front-tile-row-9-column-10-img" class="front-tile-img"></img>
-            <img src="assets/img/row-10-col-1.jpg" id="front-tile-row-10-column-1-img" class="front-tile-img"></img>
-            <img src="assets/img/row-10-col-2.jpg" id="front-tile-row-10-column-2-img" class="front-tile-img"></img>
-            <img src="assets/img/row-10-col-3.jpg" id="front-tile-row-10-column-3-img" class="front-tile-img"></img>
-            <img src="assets/img/row-10-col-4.jpg" id="front-tile-row-10-column-4-img" class="front-tile-img"></img>
-            <img src="assets/img/row-10-col-5.jpg" id="front-tile-row-10-column-5-img" class="front-tile-img"></img>
-            <img src="assets/img/row-10-col-6.jpg" id="front-tile-row-10-column-6-img" class="front-tile-img"></img>
-            <img src="assets/img/row-10-col-7.jpg" id="front-tile-row-10-column-7-img" class="front-tile-img"></img>
-            <img src="assets/img/row-10-col-8.jpg" id="front-tile-row-10-column-8-img" class="front-tile-img"></img>
-            <img src="assets/img/row-10-col-9.jpg" id="front-tile-row-10-column-9-img" class="front-tile-img"></img>
-            <img src="assets/img/row-10-col-10.jpg" id="front-tile-row-10-column-10-img" class="front-tile-img"></img>
+            <img src="assets/img/row-3-col-1.jpg" id="front-tile-row-3-column-1-img" class="front-tile-img" onclick="clickTile(21)"/>
+            <img src="assets/img/row-3-col-2.jpg" id="front-tile-row-3-column-2-img" class="front-tile-img" onclick="clickTile(22)"/>
+            <img src="assets/img/row-3-col-3.jpg" id="front-tile-row-3-column-3-img" class="front-tile-img" onclick="clickTile(23)"/>
+            <img src="assets/img/row-3-col-4.jpg" id="front-tile-row-3-column-4-img" class="front-tile-img" onclick="clickTile(24)"/>
+            <img src="assets/img/row-3-col-5.jpg" id="front-tile-row-3-column-5-img" class="front-tile-img" onclick="clickTile(25)"/>
+            <img src="assets/img/row-3-col-6.jpg" id="front-tile-row-3-column-6-img" class="front-tile-img" onclick="clickTile(26)"/>
+            <img src="assets/img/row-3-col-7.jpg" id="front-tile-row-3-column-7-img" class="front-tile-img" onclick="clickTile(27)"/>
+            <img src="assets/img/row-3-col-8.jpg" id="front-tile-row-3-column-8-img" class="front-tile-img" onclick="clickTile(28)"/>
+            <img src="assets/img/row-3-col-9.jpg" id="front-tile-row-3-column-9-img" class="front-tile-img" onclick="clickTile(29)"/>
+            <img src="assets/img/row-3-col-10.jpg" id="front-tile-row-3-column-10-img" class="front-tile-img" onclick="clickTile(30)"/>
+            <img src="assets/img/row-4-col-1.jpg" id="front-tile-row-4-column-1-img" class="front-tile-img" onclick="clickTile(31)"/>
+            <img src="assets/img/row-4-col-2.jpg" id="front-tile-row-4-column-2-img" class="front-tile-img" onclick="clickTile(32)"/>
+            <img src="assets/img/row-4-col-3.jpg" id="front-tile-row-4-column-3-img" class="front-tile-img" onclick="clickTile(33)"/>
+            <img src="assets/img/row-4-col-4.jpg" id="front-tile-row-4-column-4-img" class="front-tile-img" onclick="clickTile(34)"/>
+            <img src="assets/img/row-4-col-5.jpg" id="front-tile-row-4-column-5-img" class="front-tile-img" onclick="clickTile(35)"/>
+            <img src="assets/img/row-4-col-6.jpg" id="front-tile-row-4-column-6-img" class="front-tile-img" onclick="clickTile(36)"/>
+            <img src="assets/img/row-4-col-7.jpg" id="front-tile-row-4-column-7-img" class="front-tile-img" onclick="clickTile(37)"/>
+            <img src="assets/img/row-4-col-8.jpg" id="front-tile-row-4-column-8-img" class="front-tile-img" onclick="clickTile(38)"/>
+            <img src="assets/img/row-4-col-9.jpg" id="front-tile-row-4-column-9-img" class="front-tile-img" onclick="clickTile(39)"/>
+            <img src="assets/img/row-4-col-10.jpg" id="front-tile-row-4-column-10-img" class="front-tile-img" onclick="clickTile(40)"/>
+            <img src="assets/img/row-5-col-1.jpg" id="front-tile-row-5-column-1-img" class="front-tile-img" onclick="clickTile(41)"/>
+            <img src="assets/img/row-5-col-2.jpg" id="front-tile-row-5-column-2-img" class="front-tile-img" onclick="clickTile(42)"/>
+            <img src="assets/img/row-5-col-3.jpg" id="front-tile-row-5-column-3-img" class="front-tile-img" onclick="clickTile(43)"/>
+            <img src="assets/img/row-5-col-4.jpg" id="front-tile-row-5-column-4-img" class="front-tile-img" onclick="clickTile(44)"/>
+            <img src="assets/img/row-5-col-5.jpg" id="front-tile-row-5-column-5-img" class="front-tile-img" onclick="clickTile(45)"/>
+            <img src="assets/img/row-5-col-6.jpg" id="front-tile-row-5-column-6-img" class="front-tile-img" onclick="clickTile(46)"/>
+            <img src="assets/img/row-5-col-7.jpg" id="front-tile-row-5-column-7-img" class="front-tile-img" onclick="clickTile(47)"/>
+            <img src="assets/img/row-5-col-8.jpg" id="front-tile-row-5-column-8-img" class="front-tile-img" onclick="clickTile(48)"/>
+            <img src="assets/img/row-5-col-9.jpg" id="front-tile-row-5-column-9-img" class="front-tile-img" onclick="clickTile(49)"/>
+            <img src="assets/img/row-5-col-10.jpg" id="front-tile-row-5-column-10-img" class="front-tile-img" onclick="clickTile(50)"/>
+            <img src="assets/img/row-6-col-1.jpg" id="front-tile-row-6-column-1-img" class="front-tile-img" onclick="clickTile(51)"/>
+            <img src="assets/img/row-6-col-2.jpg" id="front-tile-row-6-column-2-img" class="front-tile-img" onclick="clickTile(52)"/>
+            <img src="assets/img/row-6-col-3.jpg" id="front-tile-row-6-column-3-img" class="front-tile-img" onclick="clickTile(53)"/>
+            <img src="assets/img/row-6-col-4.jpg" id="front-tile-row-6-column-4-img" class="front-tile-img" onclick="clickTile(54)"/>
+            <img src="assets/img/row-6-col-5.jpg" id="front-tile-row-6-column-5-img" class="front-tile-img" onclick="clickTile(55)"/>
+            <img src="assets/img/row-6-col-6.jpg" id="front-tile-row-6-column-6-img" class="front-tile-img" onclick="clickTile(56)"/>
+            <img src="assets/img/row-6-col-7.jpg" id="front-tile-row-6-column-7-img" class="front-tile-img" onclick="clickTile(57)"/>
+            <img src="assets/img/row-6-col-8.jpg" id="front-tile-row-6-column-8-img" class="front-tile-img" onclick="clickTile(58)"/>
+            <img src="assets/img/row-6-col-9.jpg" id="front-tile-row-6-column-9-img" class="front-tile-img" onclick="clickTile(59)"/>
+            <img src="assets/img/row-6-col-10.jpg" id="front-tile-row-6-column-10-img" class="front-tile-img" onclick="clickTile(60)"/>
+            <img src="assets/img/row-7-col-1.jpg" id="front-tile-row-7-column-1-img" class="front-tile-img" onclick="clickTile(61)"/>
+            <img src="assets/img/row-7-col-2.jpg" id="front-tile-row-7-column-2-img" class="front-tile-img" onclick="clickTile(62)"/>
+            <img src="assets/img/row-7-col-3.jpg" id="front-tile-row-7-column-3-img" class="front-tile-img" onclick="clickTile(63)"/>
+            <img src="assets/img/row-7-col-4.jpg" id="front-tile-row-7-column-4-img" class="front-tile-img" onclick="clickTile(64)"/>
+            <img src="assets/img/row-7-col-5.jpg" id="front-tile-row-7-column-5-img" class="front-tile-img" onclick="clickTile(65)"/>
+            <img src="assets/img/row-7-col-6.jpg" id="front-tile-row-7-column-6-img" class="front-tile-img" onclick="clickTile(66)"/>
+            <img src="assets/img/row-7-col-7.jpg" id="front-tile-row-7-column-7-img" class="front-tile-img" onclick="clickTile(67)"/>
+            <img src="assets/img/row-7-col-8.jpg" id="front-tile-row-7-column-8-img" class="front-tile-img" onclick="clickTile(68)"/>
+            <img src="assets/img/row-7-col-9.jpg" id="front-tile-row-7-column-9-img" class="front-tile-img" onclick="clickTile(69)"/>
+            <img src="assets/img/row-7-col-10.jpg" id="front-tile-row-7-column-10-img" class="front-tile-img" onclick="clickTile(70)"/>
+            <img src="assets/img/row-8-col-1.jpg" id="front-tile-row-8-column-1-img" class="front-tile-img" onclick="clickTile(71)"/>
+            <img src="assets/img/row-8-col-2.jpg" id="front-tile-row-8-column-2-img" class="front-tile-img" onclick="clickTile(72)"/>
+            <img src="assets/img/row-8-col-3.jpg" id="front-tile-row-8-column-3-img" class="front-tile-img" onclick="clickTile(73)"/>
+            <img src="assets/img/row-8-col-4.jpg" id="front-tile-row-8-column-4-img" class="front-tile-img" onclick="clickTile(74)"/>
+            <img src="assets/img/row-8-col-5.jpg" id="front-tile-row-8-column-5-img" class="front-tile-img" onclick="clickTile(75)"/>
+            <img src="assets/img/row-8-col-6.jpg" id="front-tile-row-8-column-6-img" class="front-tile-img" onclick="clickTile(76)"/>
+            <img src="assets/img/row-8-col-7.jpg" id="front-tile-row-8-column-7-img" class="front-tile-img" onclick="clickTile(77)"/>
+            <img src="assets/img/row-8-col-8.jpg" id="front-tile-row-8-column-8-img" class="front-tile-img" onclick="clickTile(78)"/>
+            <img src="assets/img/row-8-col-9.jpg" id="front-tile-row-8-column-9-img" class="front-tile-img" onclick="clickTile(79)"/>
+            <img src="assets/img/row-8-col-10.jpg" id="front-tile-row-8-column-10-img" class="front-tile-img" onclick="clickTile(80)"/>
+            <img src="assets/img/row-9-col-1.jpg" id="front-tile-row-9-column-1-img" class="front-tile-img" onclick="clickTile(81)"/>
+            <img src="assets/img/row-9-col-2.jpg" id="front-tile-row-9-column-2-img" class="front-tile-img" onclick="clickTile(82)"/>
+            <img src="assets/img/row-9-col-3.jpg" id="front-tile-row-9-column-3-img" class="front-tile-img" onclick="clickTile(83)"/>
+            <img src="assets/img/row-9-col-4.jpg" id="front-tile-row-9-column-4-img" class="front-tile-img" onclick="clickTile(84)"/>
+            <img src="assets/img/row-9-col-5.jpg" id="front-tile-row-9-column-5-img" class="front-tile-img" onclick="clickTile(85)"/>
+            <img src="assets/img/row-9-col-6.jpg" id="front-tile-row-9-column-6-img" class="front-tile-img" onclick="clickTile(86)"/>
+            <img src="assets/img/row-9-col-7.jpg" id="front-tile-row-9-column-7-img" class="front-tile-img" onclick="clickTile(87)"/>
+            <img src="assets/img/row-9-col-8.jpg" id="front-tile-row-9-column-8-img" class="front-tile-img" onclick="clickTile(88)"/>
+            <img src="assets/img/row-9-col-9.jpg" id="front-tile-row-9-column-9-img" class="front-tile-img" onclick="clickTile(89)"/>
+            <img src="assets/img/row-9-col-10.jpg" id="front-tile-row-9-column-10-img" class="front-tile-img" onclick="clickTile(90)"/>
+            <img src="assets/img/row-10-col-1.jpg" id="front-tile-row-10-column-1-img" class="front-tile-img" onclick="clickTile(91)"/>
+            <img src="assets/img/row-10-col-2.jpg" id="front-tile-row-10-column-2-img" class="front-tile-img" onclick="clickTile(92)"/>
+            <img src="assets/img/row-10-col-3.jpg" id="front-tile-row-10-column-3-img" class="front-tile-img" onclick="clickTile(93)"/>
+            <img src="assets/img/row-10-col-4.jpg" id="front-tile-row-10-column-4-img" class="front-tile-img" onclick="clickTile(94)"/>
+            <img src="assets/img/row-10-col-5.jpg" id="front-tile-row-10-column-5-img" class="front-tile-img" onclick="clickTile(95)"/>
+            <img src="assets/img/row-10-col-6.jpg" id="front-tile-row-10-column-6-img" class="front-tile-img" onclick="clickTile(96)"/>
+            <img src="assets/img/row-10-col-7.jpg" id="front-tile-row-10-column-7-img" class="front-tile-img" onclick="clickTile(97)"/>
+            <img src="assets/img/row-10-col-8.jpg" id="front-tile-row-10-column-8-img" class="front-tile-img" onclick="clickTile(98)"/>
+            <img src="assets/img/row-10-col-9.jpg" id="front-tile-row-10-column-9-img" class="front-tile-img" onclick="clickTile(99)"/>
+            <img src="assets/img/row-10-col-10.jpg" id="front-tile-row-10-column-10-img" class="front-tile-img" onclick="clickTile(100)"/>
             <!--#endregion-->
             <!--#region back-tile images-->
             <img src="" id="back-tile-row-1-column-1-img" class="back-tile-img">
@@ -216,6 +220,8 @@
             <img src="" id="back-tile-row-10-column-10-img" class="back-tile-img">
             <!--#endregion-->
         </div>
+        <div id="test-button" onclick="testButton()"></div>
+    </div>
 </body>
 <script type="text/javascript" src="assets/js/script.js"></script>
 </html>

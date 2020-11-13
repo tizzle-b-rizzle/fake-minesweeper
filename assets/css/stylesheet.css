@@ -7,7 +7,13 @@
 }
 /*#endregion*/
 
-/*#region The game container and the count*/
+#test-button {
+  height:40px;
+  width:100px;
+  background-color: blue;
+}
+
+/*#region The game container and the message*/
 #game-container {
   background-color: green;
   height: 40vw;
@@ -16,9 +22,21 @@
   width: 35vw;
 }
 
-#bomb-count {
+#player-message {
   background-color: aqua;
   height: 12.5%;
+  position: relative;
+  width:100%;
+}
+
+#the-message {
+  background-color:aqua;
+  color:black;
+  font-family: 'Anton', sans-serif;
+  font-size: 40px;
+  padding-left:4vw;
+  padding-top:.70vw;
+  position: absolute;
 }
 /*#endregion*/
 
