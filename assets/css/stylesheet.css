@@ -23,20 +23,32 @@
 }
 
 #player-message {
-  background-color: aqua;
+  animation: background-animation 4s infinite;
   height: 12.5%;
   position: relative;
   width:100%;
 }
 
 #the-message {
-  background-color:aqua;
+  animation: background-animation 4s infinite;
   color:black;
   font-family: 'Anton', sans-serif;
-  font-size: 40px;
-  padding-left:4vw;
+  font-size: 2.5vw;
+  padding-left:4.5vw;
   padding-top:.70vw;
   position: absolute;
+}
+
+@keyframes background-animation{
+  0% {
+    background-color: green;
+  }
+  50% {
+    background-color: purple;
+  }
+  100% {
+    background-color: green;
+  }
 }
 /*#endregion*/
 

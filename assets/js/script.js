@@ -22,7 +22,7 @@ var arrayOfGameBombState =
     0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
     0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
     0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-    0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+    0, 0, 0, 0, 0, 0, 0, 0, 0, "B"
 ]
 var numberOfBombs = 0;
 for(var i = 0; i < (arrayOfGameBombState.length - 1); i++) { //do if else for each tile
@@ -39,6 +39,7 @@ for(var i = 0; i < (arrayOfGameBombState.length - 1); i++) { //do if else for ea
 } 
 
 //#region set the bombs
+function setTheBombs() {
 if (arrayOfGameBombState[0] == "B") {
     element = document.getElementById("back-tile-row-1-column-1-img").src = "assets/img/bob-omb-not-lit.jpg";
 } else {
@@ -2696,7 +2697,7 @@ if (arrayOfGameBombState[99] == "B") {
         bombState100 += 1;
     }
     element = document.getElementById("back-tile-row-10-column-10-img").src = "assets/img/" + bombState100 + ".png";
-} 
+} }
 //#endregion
 function playerLoses() { 
         for (var i = 1; i < 11; i++)  { 
@@ -2706,6 +2707,9 @@ function playerLoses() {
             imageBack.src = "assets/img/bob-omb-lit.jpg";
             imageFront.style.visibility="hidden";
             imageFront.style.display="none";
+            message = document.getElementById("the-message").innerHTML = "You lose!";
+            message = document.getElementById("the-message").style.fontSize = "3.5vw";
+            message = document.getElementById("the-message").style.paddingLeft = "11.5vw";
         }}
     
     }
@@ -2720,8 +2724,13 @@ var firstClick = 0;
 function clickTile(a) {
     if (firstClick == 0 ) {
         message = document.getElementById("the-message").innerHTML = "Oh shit, it's actually Minesweeper!";
-        message = document.getElementById("the-message").style.fontSize="30px";
+        message = document.getElementById("the-message").style.fontSize="2.2vw";
+        message = document.getElementById("the-message").style.paddingLeft="7.5vw";
+        message = document.getElementById("the-message").style.paddingTop="0.2vw";
         message = document.getElementById("the-message").style.color="red";
+        message = document.getElementById("the-message").style.fontFamily = "'VT323', monospace";
+        arrayOfGameBombState[a - 1] = "NB";
+        setTheBombs();
         firstClick += 1;
         clickTile(a);
     }
@@ -3264,6 +3273,366 @@ function clickTile(a) {
                 }
                 else {
                 image = document.getElementById("front-tile-row-6-column-10-img");
+                image.style.display = "none";
+                break;
+                }
+            case 61:
+                if (arrayOfGameBombState[60] == "B") {
+                    playerLoses();
+                }
+                else {
+                image = document.getElementById("front-tile-row-7-column-1-img");
+                image.style.display = "none";
+                break;
+                }
+            case 62:
+                if (arrayOfGameBombState[61] == "B") {
+                    playerLoses();
+                }
+                else {
+                image = document.getElementById("front-tile-row-7-column-2-img");
+                image.style.display = "none";
+                break;
+                }
+            case 63:
+                if (arrayOfGameBombState[62] == "B") {
+                    playerLoses();
+                }
+                else {
+                image = document.getElementById("front-tile-row-7-column-3-img");
+                image.style.display = "none";
+                break;
+                }
+            case 64:
+                if (arrayOfGameBombState[63] == "B") {
+                    playerLoses();
+                }
+                else {
+                image = document.getElementById("front-tile-row-7-column-4-img");
+                image.style.display = "none";
+                break;
+                }
+            case 65:
+                if (arrayOfGameBombState[64] == "B") {
+                    playerLoses();
+                }
+                else {
+                image = document.getElementById("front-tile-row-7-column-5-img");
+                image.style.display = "none";
+                break;
+                }
+            case 66:
+                if (arrayOfGameBombState[65] == "B") {
+                    playerLoses();
+                }
+                else {
+                image = document.getElementById("front-tile-row-7-column-6-img");
+                image.style.display = "none";
+                break;
+                }
+            case 67:
+                if (arrayOfGameBombState[66] == "B") {
+                    playerLoses();
+                }
+                else {
+                image = document.getElementById("front-tile-row-7-column-7-img");
+                image.style.display = "none";
+                break;
+                }
+            case 68:
+                if (arrayOfGameBombState[67] == "B") {
+                    playerLoses();
+                }
+                else {
+                image = document.getElementById("front-tile-row-7-column-8-img");
+                image.style.display = "none";
+                break;
+                }
+            case 69:
+                if (arrayOfGameBombState[68] == "B") {
+                    playerLoses();
+                }
+                else {
+                image = document.getElementById("front-tile-row-7-column-9-img");
+                image.style.display = "none";
+                break;
+                }
+            case 70:
+                if (arrayOfGameBombState[69] == "B") {
+                    playerLoses();
+                }
+                else {
+                image = document.getElementById("front-tile-row-7-column-10-img");
+                image.style.display = "none";
+                break;
+                }
+            case 71:
+                if (arrayOfGameBombState[70] == "B") {
+                    playerLoses();
+                }
+                else {
+                image = document.getElementById("front-tile-row-8-column-1-img");
+                image.style.display = "none";
+                break;
+                }
+            case 72:
+                if (arrayOfGameBombState[71] == "B") {
+                    playerLoses();
+                }
+                else {
+                image = document.getElementById("front-tile-row-8-column-2-img");
+                image.style.display = "none";
+                break;
+                }
+            case 73:
+                if (arrayOfGameBombState[72] == "B") {
+                    playerLoses();
+                }
+                else {
+                image = document.getElementById("front-tile-row-8-column-3-img");
+                image.style.display = "none";
+                break;
+                }
+            case 74:
+                if (arrayOfGameBombState[73] == "B") {
+                    playerLoses();
+                }
+                else {
+                image = document.getElementById("front-tile-row-8-column-4-img");
+                image.style.display = "none";
+                break;
+                }
+            case 75:
+                if (arrayOfGameBombState[74] == "B") {
+                    playerLoses();
+                }
+                else {
+                image = document.getElementById("front-tile-row-8-column-5-img");
+                image.style.display = "none";
+                break;
+                }
+            case 76:
+                if (arrayOfGameBombState[75] == "B") {
+                    playerLoses();
+                }
+                else {
+                image = document.getElementById("front-tile-row-8-column-6-img");
+                image.style.display = "none";
+                break;
+                }
+            case 77:
+                if (arrayOfGameBombState[76] == "B") {
+                    playerLoses();
+                }
+                else {
+                image = document.getElementById("front-tile-row-8-column-7-img");
+                image.style.display = "none";
+                break;
+                }
+            case 78:
+                if (arrayOfGameBombState[77] == "B") {
+                    playerLoses();
+                }
+                else {
+                image = document.getElementById("front-tile-row-8-column-8-img");
+                image.style.display = "none";
+                break;
+                }
+            case 79:
+                if (arrayOfGameBombState[78] == "B") {
+                    playerLoses();
+                }
+                else {
+                image = document.getElementById("front-tile-row-8-column-9-img");
+                image.style.display = "none";
+                break;
+                }
+            case 80:
+                if (arrayOfGameBombState[79] == "B") {
+                    playerLoses();
+                }
+                else {
+                image = document.getElementById("front-tile-row-8-column-10-img");
+                image.style.display = "none";
+                break;
+                }
+            case 81:
+                if (arrayOfGameBombState[80] == "B") {
+                    playerLoses();
+                }
+                else {
+                image = document.getElementById("front-tile-row-9-column-1-img");
+                image.style.display = "none";
+                break;
+                }
+            case 82:
+                if (arrayOfGameBombState[81] == "B") {
+                    playerLoses();
+                }
+                else {
+                image = document.getElementById("front-tile-row-9-column-2-img");
+                image.style.display = "none";
+                break;
+                }
+            case 83:
+                if (arrayOfGameBombState[82] == "B") {
+                    playerLoses();
+                }
+                else {
+                image = document.getElementById("front-tile-row-9-column-3-img");
+                image.style.display = "none";
+                break;
+                }
+            case 84:
+                if (arrayOfGameBombState[83] == "B") {
+                    playerLoses();
+                }
+                else {
+                image = document.getElementById("front-tile-row-9-column-4-img");
+                image.style.display = "none";
+                break;
+                }
+            case 85:
+                if (arrayOfGameBombState[84] == "B") {
+                    playerLoses();
+                }
+                else {
+                image = document.getElementById("front-tile-row-9-column-5-img");
+                image.style.display = "none";
+                break;
+                }
+            case 86:
+                if (arrayOfGameBombState[85] == "B") {
+                    playerLoses();
+                }
+                else {
+                image = document.getElementById("front-tile-row-9-column-6-img");
+                image.style.display = "none";
+                break;
+                }
+            case 87:
+                if (arrayOfGameBombState[86] == "B") {
+                    playerLoses();
+                }
+                else {
+                image = document.getElementById("front-tile-row-9-column-7-img");
+                image.style.display = "none";
+                break;
+                }
+            case 88:
+                if (arrayOfGameBombState[87] == "B") {
+                    playerLoses();
+                }
+                else {
+                image = document.getElementById("front-tile-row-9-column-8-img");
+                image.style.display = "none";
+                break;
+                }
+            case 89:
+                if (arrayOfGameBombState[88] == "B") {
+                    playerLoses();
+                }
+                else {
+                image = document.getElementById("front-tile-row-9-column-9-img");
+                image.style.display = "none";
+                break;
+                }
+            case 90:
+                if (arrayOfGameBombState[89] == "B") {
+                    playerLoses();
+                }
+                else {
+                image = document.getElementById("front-tile-row-9-column-10-img");
+                image.style.display = "none";
+                break;
+                }
+            case 91:
+                if (arrayOfGameBombState[90] == "B") {
+                    playerLoses();
+                }
+                else {
+                image = document.getElementById("front-tile-row-10-column-1-img");
+                image.style.display = "none";
+                break;
+                }
+            case 92:
+                if (arrayOfGameBombState[91] == "B") {
+                    playerLoses();
+                }
+                else {
+                image = document.getElementById("front-tile-row-10-column-2-img");
+                image.style.display = "none";
+                break;
+                }
+            case 93:
+                if (arrayOfGameBombState[92] == "B") {
+                    playerLoses();
+                }
+                else {
+                image = document.getElementById("front-tile-row-10-column-3-img");
+                image.style.display = "none";
+                break;
+                }
+            case 94:
+                if (arrayOfGameBombState[93] == "B") {
+                    playerLoses();
+                }
+                else {
+                image = document.getElementById("front-tile-row-10-column-4-img");
+                image.style.display = "none";
+                break;
+                }
+            case 95:
+                if (arrayOfGameBombState[94] == "B") {
+                    playerLoses();
+                }
+                else {
+                image = document.getElementById("front-tile-row-10-column-5-img");
+                image.style.display = "none";
+                break;
+                }
+            case 96:
+                if (arrayOfGameBombState[95] == "B") {
+                    playerLoses();
+                }
+                else {
+                image = document.getElementById("front-tile-row-10-column-6-img");
+                image.style.display = "none";
+                break;
+                }
+            case 97:
+                if (arrayOfGameBombState[96] == "B") {
+                    playerLoses();
+                }
+                else {
+                image = document.getElementById("front-tile-row-10-column-7-img");
+                image.style.display = "none";
+                break;
+                }
+            case 98:
+                if (arrayOfGameBombState[97] == "B") {
+                    playerLoses();
+                }
+                else {
+                image = document.getElementById("front-tile-row-10-column-8-img");
+                image.style.display = "none";
+                break;
+                }
+            case 99:
+                if (arrayOfGameBombState[98] == "B") {
+                    playerLoses();
+                }
+                else {
+                image = document.getElementById("front-tile-row-10-column-9-img");
+                image.style.display = "none";
+                break;
+                }
+            case 100:
+                if (arrayOfGameBombState[99] == "B") {
+                    playerLoses();
+                }
+                else {
+                image = document.getElementById("front-tile-row-10-column-10-img");
                 image.style.display = "none";
                 break;
                 }
