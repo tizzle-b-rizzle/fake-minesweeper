@@ -22,7 +22,7 @@ var arrayOfGameBombState =
     0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
     0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
     0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-    0, 0, 0, 0, 0, 0, 0, 0, 0, "B"
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 ]
 var numberOfBombs = 0;
 for(var i = 0; i < (arrayOfGameBombState.length - 1); i++) { //do if else for each tile
