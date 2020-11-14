@@ -2707,26 +2707,44 @@ function playerLoses() {
             imageBack.src = "assets/img/bob-omb-lit.jpg";
             imageFront.style.visibility="hidden";
             imageFront.style.display="none";
-            message = document.getElementById("the-message").innerHTML = "You lose!";
-            message = document.getElementById("the-message").style.fontSize = "3.5vw";
-            message = document.getElementById("the-message").style.paddingLeft = "11.5vw";
+            var w = window.outerWidth;
+            if (w < 600) {
+                message = document.getElementById("the-message").innerHTML = "You lose!";
+                message = document.getElementById("the-message").style.fontSize = "10vw";
+                message = document.getElementById("the-message").style.paddingLeft = "30vw";
+                message = document.getElementById("the-message").style.paddingTop = "2.4vh";
+            }
+            else {
+                message = document.getElementById("the-message").innerHTML = "You lose!";
+                message = document.getElementById("the-message").style.fontSize = "3.5vw";
+                message = document.getElementById("the-message").style.paddingLeft = "11.3vw";
+                message = document.getElementById("the-message").style.paddingTop = "1vh";
         }}
+            }
     
     }
-function testButton() {
-    for (var i = 1; i < 11; i++)  { 
-        for (var j = 1; j < 11; j++) {
-            imageFront = document.getElementById("front-tile-row-" + i +"-column-" + j + "-img");
-            imageFront.style.visibility="hidden";
-            imageFront.style.display="none";    }}
-}
+// function testButton() {
+//     for (var i = 1; i < 11; i++)  { 
+//         for (var j = 1; j < 11; j++) {
+//             imageFront = document.getElementById("front-tile-row-" + i +"-column-" + j + "-img");
+//             imageFront.style.visibility="hidden";
+//             imageFront.style.display="none";    }}
+// }
 var firstClick = 0;
 function clickTile(a) {
     if (firstClick == 0 ) {
         message = document.getElementById("the-message").innerHTML = "Oh shit, it's actually Minesweeper!";
-        message = document.getElementById("the-message").style.fontSize="2.2vw";
-        message = document.getElementById("the-message").style.paddingLeft="7.5vw";
-        message = document.getElementById("the-message").style.paddingTop="0.2vw";
+        var w = window.outerWidth;
+        if (w < 600) {
+            message = document.getElementById("the-message").style.fontSize="6vw";
+            message = document.getElementById("the-message").style.paddingLeft="8vw";
+            message = document.getElementById("the-message").style.paddingTop="3.5vh";
+        }
+        else {
+            message = document.getElementById("the-message").style.fontSize="2.2vw";
+            message = document.getElementById("the-message").style.paddingLeft="7.5vw";
+            message = document.getElementById("the-message").style.paddingTop="0.2vw";
+        }
         message = document.getElementById("the-message").style.color="red";
         message = document.getElementById("the-message").style.fontFamily = "'VT323', monospace";
         arrayOfGameBombState[a - 1] = "NB";

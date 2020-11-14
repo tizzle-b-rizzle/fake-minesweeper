@@ -7,12 +7,6 @@
 }
 /*#endregion*/
 
-#test-button {
-  height:40px;
-  width:100px;
-  background-color: blue;
-}
-
 /*#region The game container and the message*/
 #game-container {
   background-color: green;
@@ -35,7 +29,7 @@
   font-family: 'Anton', sans-serif;
   font-size: 2.5vw;
   padding-left:4.5vw;
-  padding-top:.70vw;
+  padding-top:1.6vh;
   position: absolute;
 }
 
@@ -900,5 +894,10 @@
     margin-left: 0;
     margin-top: 0;
     width: 100vw;
+  }
+  #the-message {
+    font-size:8vw;
+    padding-left:8.5vw;
+    padding-top:2vh;
   }
 }
